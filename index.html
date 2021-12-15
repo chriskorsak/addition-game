@@ -72,6 +72,10 @@
     }
 
     @media (max-width: 760px) {
+      body {
+        align-items: flex-start;
+        padding: 2rem;
+      }
       .card {
         min-width: 350px;
         width: 90%;
@@ -158,7 +162,7 @@
       return (
         <div class="card">
           <div id="problem" className={state.incorrect ? "incorrect" : ""}>{state.num1} + {state.num2}</div>
-          <input autoFocus="true" type="text" onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response}/>
+          <input autoFocus="true" type="number" onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response}/>
           <div id="score">Score: {state.score}</div>
         </div>
       )
